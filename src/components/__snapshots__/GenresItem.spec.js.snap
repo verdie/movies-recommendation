@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GenresItem component renders correctly 1`] = `
+<div
+  className="wrap"
+>
+  <h2>
+    Please select category that you like
+  </h2>
+  <div
+    className="category-wrapper"
+  />
+</div>
+`;

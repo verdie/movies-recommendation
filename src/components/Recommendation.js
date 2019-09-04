@@ -1,8 +1,10 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
 import * as request from 'superagent';
 import {Link} from 'react-router-dom'
+import recomFunc from './helpers/recomFunc.js';
 import './Recommendation.css'
+
 
 class Recommendation extends React.Component {
   state = {
@@ -19,22 +21,7 @@ class Recommendation extends React.Component {
           return res.body.results;
         })
     })).then(values => {
-      var counts = {};
-      values
-        .flat()
-        .forEach((movie) => {
-          if (!counts[movie.id])
-            counts[movie.id] = {
-              times: 0
-            };
-          counts[movie.id].times = counts[movie.id].times + 1;
-          counts[movie.id].movie = movie;
-        });
-      this.setState({
-        current: Object
-          .values(counts)
-          .sort((a, b) => b.times - a.times)
-      })
+      this.setState({current: recomFunc(values)})
     })
   }
 
@@ -54,26 +41,33 @@ class Recommendation extends React.Component {
         <h2>We recommend you to watch</h2>
         {movieRec
           ? <div className='rec-movie'>
-            <h4>{movieRec.title.slice(0, 50)}</h4>
-            <div className='rec-movie-container'>
-            <img
-              src={`http://image.tmdb.org/t/p/w185/${movieRec.poster_path}`}
-              alt='poster' />
-            <p>{movieRec.overview.slice(0, 410)}</p>
-          </div>
-          </div>
+              <h4>{movieRec
+                  .title
+                  .slice(0, 50)}</h4>
+              <div className='rec-movie-container'>
+                <img
+                  src={`http://image.tmdb.org/t/p/w185/${movieRec.poster_path}`}
+                  alt='poster'/>
+                <p>{movieRec
+                    .overview
+                    .slice(0, 410)}</p>
+              </div>
+            </div>
           : null
-          
-        }
-        <button className='rec-button'onClick={this.onClick}>Next</button>
-        <Link className='link'to='/'>Go to main page</Link>
+}
+        <div className='buttons'>
+          <button className='rec-button' onClick={this.onClick}>Next</button>
+          <Link className='link' to='/'>
+            <p className='link-p'>Go to main page</p>
+          </Link>
+        </div>
       </div>
     )
   }
 }
 
 function mapStateToProps(state) {
-  return { movies: state.movies }
+  return {movies: state.movies}
 }
 
 export default connect(mapStateToProps, null)(Recommendation)

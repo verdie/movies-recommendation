@@ -1,11 +1,17 @@
-.category-wrapper{
+.wrap{
   width: 1024px;
   margin: 0 auto;
   -webkit-box-shadow: 0px 0px 16px 2px rgba(189,171,136,0.61);
   -moz-box-shadow: 0px 0px 16px 2px rgba(189,171,136,0.61);
   box-shadow: 0px 0px 16px 2px rgba(189,171,136,0.61);
   background-color: rgb(254, 250, 245);
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+}
+
+.category-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px;
 }
 h2{
   text-align: center;
@@ -16,21 +22,20 @@ a {
   text-decoration: none;
   color:  rgb(130, 111, 89);
   font-size: 20px;
+  width: 22%;
+  margin: 0 14px;
 }
-a p:hover{
+.genre-p:hover{
   background-color:  rgb(247, 242, 235);
 }
 
-a p{
-  display: block;
+.genre-p{
   padding: 20px 20px;
   text-align: center;
   font-weight: bolder;
   border: 3px solid rgb(227, 207, 184);
-  margin-right: 200px;
-  margin-left: 200px;
 }
 
-a p:active{
+.genre-p:active{
   background-color: rgb(247, 242, 235);
 }

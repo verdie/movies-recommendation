@@ -38,43 +38,49 @@ class GenresItem extends React.Component {
   render() {
 
     return (
-      <div className='movies-wrapper'>
+      <div className='wrap'>
         <h2>Please select movies that you like</h2>
-        {this.state.movies.length
-          ? this
-            .state
-            .movies
-            .map(item => {
-              const isActive = this
-                .state
-                .selectedMovies
-                .find(sel => item.id === sel.id)
-              return <div
-                className={isActive
-                ? 'active'
-                : 'movie'}
-                key={item.id}
-                onClick={(event) => {
-                this.onMovieClick(event, item)
-              }}>
-                <h4>{item
-                    .title
-                    .slice(0, 50)}</h4>
-                <div className='movie-container'>
-                  <img src={`http://image.tmdb.org/t/p/w185/${item.poster_path}`} alt='poster'/>
-                  <p>{item
-                      .overview
-                      .slice(0, 410)}</p>
-                </div>
-              </div>
-            })
-          : null}
+        <div className='movies-wrapper'>
 
-        <Link
-          to='/recommendation'
-          className='show'
-          onClick={this.onRecommendationClick}>Show Recommendation</Link>
-        <Link className='link' to='/'>Go to main page</Link>
+          {this.state.movies.length
+            ? this
+              .state
+              .movies
+              .map(item => {
+                const isActive = this
+                  .state
+                  .selectedMovies
+                  .find(sel => item.id === sel.id)
+                return <div
+                  className={isActive
+                  ? 'active'
+                  : 'movie'}
+                  key={item.id}
+                  onClick={(event) => {
+                  this.onMovieClick(event, item)
+                }}>
+                  <h4>{item
+                      .title
+                      .slice(0, 50)}</h4>
+                  <div className='movie-container'>
+                    <img src={`http://image.tmdb.org/t/p/w185/${item.poster_path}`} alt='poster'/>
+                  </div>
+                </div>
+              })
+            : null}
+
+        </div>
+        <div className='buttons'>
+          <Link
+            to='/recommendation'
+            className='show'
+            onClick={this.onRecommendationClick}>
+            Show Recommendation
+          </Link>
+          <Link className='link' to='/'>
+            <p className='link-p'>Go to main page</p>
+          </Link>
+        </div>
       </div>
     )
   }

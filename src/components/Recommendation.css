@@ -4,14 +4,15 @@
   -webkit-box-shadow: 0px 0px 16px 2px rgba(189,171,136,0.61);
   -moz-box-shadow: 0px 0px 16px 2px rgba(189,171,136,0.61);
   box-shadow: 0px 0px 16px 2px rgba(189,171,136,0.61);
-  background-color: rgb(254, 252, 249);
+  background-color: rgb(254, 250, 245);
+  padding-bottom: 30px;
 }
 
 .rec-movie{
-  margin-left: 280px;
-  display: inline-block;
+  margin: 0 auto;
   border: 3px solid rgb(227, 207, 184);
   margin-bottom: 20px;
+  width: 50%;
 }
 
 .rec-movie h4{
@@ -23,6 +24,7 @@
   width: 450px;
   display: flex;
   flex-direction: row;
+  padding-bottom: 10px;
 }
 
 .rec-movie-container p{
@@ -44,6 +46,10 @@
   padding: 10px 20px;
   text-align: center;
   border: 3px solid rgb(227, 207, 184);
+  background-color: rgb(254, 250, 245);
+  font-size: 16px;
+  color:  rgb(130, 111, 89);
+  font-weight: bold;
 }
 
 .rec-button:active{
