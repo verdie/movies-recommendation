@@ -36,7 +36,7 @@ class GenresItem extends React.Component {
       .selectMovies(this.state.selectedMovies)
   }
   render() {
-    
+
     return (
       <div className='movies-wrapper'>
         <h2>Please select movies that you like</h2>
@@ -45,18 +45,26 @@ class GenresItem extends React.Component {
             .state
             .movies
             .map(item => {
-              const isActive = this.state.selectedMovies.find(sel => item.id === sel.id)
+              const isActive = this
+                .state
+                .selectedMovies
+                .find(sel => item.id === sel.id)
               return <div
-                className={isActive ? 'active' :'movie'}
+                className={isActive
+                ? 'active'
+                : 'movie'}
                 key={item.id}
                 onClick={(event) => {
-                this.onMovieClick(event, item) 
-              }}
-                >
-                <h4>{item.title}</h4>
+                this.onMovieClick(event, item)
+              }}>
+                <h4>{item
+                    .title
+                    .slice(0, 50)}</h4>
                 <div className='movie-container'>
                   <img src={`http://image.tmdb.org/t/p/w185/${item.poster_path}`} alt='poster'/>
-                  <p>{item.overview}</p>
+                  <p>{item
+                      .overview
+                      .slice(0, 410)}</p>
                 </div>
               </div>
             })
@@ -66,6 +74,7 @@ class GenresItem extends React.Component {
           to='/recommendation'
           className='show'
           onClick={this.onRecommendationClick}>Show Recommendation</Link>
+        <Link className='link' to='/'>Go to main page</Link>
       </div>
     )
   }
