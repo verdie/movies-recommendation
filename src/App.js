@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom'
+import GenresList from './components/GenresList';
+import GenresItem from './components/GenresItem'
+import Recommendation from './components/Recommendation'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (<main>
+      <Route path='/' exact component={GenresList}/>
+      <Route path='/genre/:genreId' exact component={GenresItem}/>
+      <Route path='/recommendation' exact component={Recommendation}/>
+    
+      </main>)
+  }
 }
 
 export default App;
