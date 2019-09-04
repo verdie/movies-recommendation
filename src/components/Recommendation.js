@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import * as request from 'superagent';
+import {Link} from 'react-router-dom'
+import './Recommendation.css'
 
 class Recommendation extends React.Component {
   state = {
@@ -48,18 +50,23 @@ class Recommendation extends React.Component {
       : null;
     console.log('Movie:', movieRec)
     return (
-      <div>
+      <div className='rec-wrapper'>
+        <h2>We recommend you to watch</h2>
         {movieRec
-          ? <div>
+          ? <div className='rec-movie'>
             <h4>{movieRec.title}</h4>
+            <div className='rec-movie-container'>
             <img
               src={`http://image.tmdb.org/t/p/w185/${movieRec.poster_path}`}
               alt='poster' />
             <p>{movieRec.overview}</p>
           </div>
+          </div>
           : null
+          
         }
-        <button onClick={this.onClick}>Next</button>
+        <button className='rec-button'onClick={this.onClick}>Next</button>
+        <Link className='link'to='/'>Go to main page</Link>
       </div>
     )
   }
