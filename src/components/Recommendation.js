@@ -54,12 +54,12 @@ class Recommendation extends React.Component {
         <h2>We recommend you to watch</h2>
         {movieRec
           ? <div className='rec-movie'>
-            <h4>{movieRec.title}</h4>
+            <h4>{movieRec.title.slice(0, 50)}</h4>
             <div className='rec-movie-container'>
             <img
               src={`http://image.tmdb.org/t/p/w185/${movieRec.poster_path}`}
               alt='poster' />
-            <p>{movieRec.overview}</p>
+            <p>{movieRec.overview.slice(0, 410)}</p>
           </div>
           </div>
           : null
