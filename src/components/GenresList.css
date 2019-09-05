@@ -37,7 +37,7 @@ a {
   text-align: center;
   font-weight: bolder;
   border: 3px solid rgb(227, 207, 184);
-  box-shadow: 0 3px 10px  rgb(227, 207, 184);
+  box-shadow: 0 3px 20px  rgb(182, 160, 135);
 }
 
 .genre-p:active{

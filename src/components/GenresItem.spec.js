@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import GenresItem from './GenresList'
+import GenresItem from './GenresItem'
 import toJson from 'enzyme-to-json'
 const mockMovies = [
   {
