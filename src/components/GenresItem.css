@@ -16,14 +16,18 @@
 }
 
 .movie{
-  border: 3px solid rgb(227, 207, 184);
+  /* border: 3px solid rgb(227, 207, 184); */
+  box-shadow: 0 3px 10px black;
   margin-bottom: 20px;
   width: 23%;
   box-sizing: border-box;
+  border-radius: 3px;
+  transition: all .3s;
 }
 
 .movie:hover{
-  border: 3px solid rgb(225, 192, 154);
+  /* border: 3px solid rgb(225, 192, 154); */
+  transform: scale(1.05);
 }
 
 .active{

@@ -24,9 +24,12 @@ a {
   font-size: 20px;
   width: 22%;
   margin: 0 14px;
+ 
 }
 .genre-p:hover{
   background-color:  rgb(247, 242, 235);
+  box-shadow: 0 5px 20px rgb(227, 207, 184);
+  transform: translateY(-3px);
 }
 
 .genre-p{
@@ -34,6 +37,7 @@ a {
   text-align: center;
   font-weight: bolder;
   border: 3px solid rgb(227, 207, 184);
+  box-shadow: 0 3px 10px  rgb(227, 207, 184);
 }
 
 .genre-p:active{

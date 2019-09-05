@@ -9,6 +9,7 @@ import './Recommendation.css'
 export class Recommendation extends React.Component {
   state = {
     index: 0,
+    // Only for testing...
     current: this.props.current ? [this.props.current] : []
   }
   componentDidMount() {
