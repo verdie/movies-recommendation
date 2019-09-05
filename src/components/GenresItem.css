@@ -23,6 +23,7 @@
   box-sizing: border-box;
   border-radius: 3px;
   transition: all .3s;
+  cursor: pointer;
 }
 
 .movie:hover{
