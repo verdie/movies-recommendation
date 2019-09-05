@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Recommendation component renders correctly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <Connect(Recommendation)
+    current={
+      Object {
+        "adult": false,
+        "backdrop_path": "/k15COpeexV5Ad0tuLjBW2jQFoOz.jpg",
+        "genre_ids": Array [
+          12,
+          16,
+          35,
+        ],
+        "id": 153518,
+        "original_language": "en",
+        "original_title": "The Angry Birds Movie",
+        "overview": "An island populated entirely by happy, flightless birds or almost entirely. In this paradise, Red, a bird with a temper problem, speedy Chuck, and the volatile Bomb have always been outsiders. But when the island is visited by mysterious green piggies, it’s up to these unlikely outcasts to figure out what the pigs are up to.",
+        "popularity": 18.559,
+        "poster_path": "/76KMEI1ZNU9HEZ4pmHTwgwa0u6d.jpg",
+        "release_date": "2016-05-20",
+        "title": "The Angry Birds Movie",
+        "video": false,
+        "vote_average": 6,
+        "vote_count": 1960,
+      }
+    }
+  />
+</ContextProvider>
+`;

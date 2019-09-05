@@ -6,10 +6,10 @@ import recomFunc from './helpers/recomFunc.js';
 import './Recommendation.css'
 
 
-class Recommendation extends React.Component {
+export class Recommendation extends React.Component {
   state = {
     index: 0,
-    current: []
+    current: this.props.current ? [this.props.current] : []
   }
   componentDidMount() {
     const movies = this.props.movies;
