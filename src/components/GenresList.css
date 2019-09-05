@@ -27,9 +27,9 @@ a {
  
 }
 .genre-p:hover{
-  background-color:  rgb(247, 242, 235);
-  box-shadow: 0 5px 20px rgb(227, 207, 184);
-  transform: translateY(-3px);
+  background-color: rgb(247, 242, 235);
+    box-shadow: 0 5px 20px rgb(227, 207, 184);
+    transform: translateY(-3px);
 }
 
 .genre-p{
